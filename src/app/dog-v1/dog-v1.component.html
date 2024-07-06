@@ -1,0 +1,20 @@
+<div class="container">
+  <button class="homeBtn" [routerLink]="'/'">Home</button>
+  <div class="dog_v1">
+    @if (content()) { @if (contentType() === 'video') {
+    <video class="dog" autoplay loop>
+      <source src="{{ content().url }}" type="video/mp4" />
+      Your browser does not support HTML video.
+    </video>
+    }@else {
+    <img src="{{ content().url }}" alt="Image not found..." class="dog" />
+    } }
+  </div>
+  <button
+    class="refreshBtn"
+    (click)="getDog()"
+    [style]="{ 'margin-bottom': '2rem' }"
+  >
+    refresh
+  </button>
+</div>
