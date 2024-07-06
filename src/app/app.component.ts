@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { DogV1Component } from './dog-v1/dog-v1.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [DogV1Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
